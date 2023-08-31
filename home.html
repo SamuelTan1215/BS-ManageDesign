@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Document</title>
 </head>
@@ -18,38 +18,67 @@
                 -後台管理
             </div>
 
-            <div class="overflow-auto mt-3">
+            <div class="overflow-auto mt-4">
 
-                <div>
-                    <a href="#" class="sidebar-link active">
+                <div><!-- 不包含子選單 -->
+                    <a href="./home.html" class="sidebar-link active">
                         <div class="px-4">
-                            首頁
+                            <i class="bi bi-house me-2"></i>首頁
                         </div>
                     </a>
                 </div>
 
-            </div>
-
-            <div>
-                <a href="#menu-order" class="sidebar-link " data-bs-toggle="collapse">
-                    <div class="d-flex justify-content-between px-4">
-                        <p class="mb-0">
-                            訂單管理
-                        </p>
-                        <i class="bi bi-caret-down"></i>
+                <div><!-- 包含子選項 -->
+                    <a href="#menu-order" class="sidebar-link " data-bs-toggle="collapse">
+                        <div class="d-flex justify-content-between px-4">
+                            <p class="mb-0">
+                                <i class="bi bi-card-checklist me-2"></i>訂單管理
+                            </p>
+                            <i class="bi bi-caret-down"></i>
+                        </div>
+                    </a>
+                    <div class="collapse " id="menu-order">
+                        <a href="./orders.html" class="d-block ps-6  text-dark text-decoration-none sidebar-link ">
+                            訂單列表
+                        </a>
+                        <a href="./order.html" class="d-block ps-6 text-dark text-decoration-none sidebar-link">
+                            單一訂單細節
+                        </a>
                     </div>
-                </a>
-                <div class="collapse" id="menu-order">
-                    <a href="#" class="sidebar-link">
-                        <div class="ps-5">
-                            其他項目
-                        </div>
+                </div>
+
+                <div><!-- 不包含子選單 -->
+                    <a class="sidebar-link"
+                      href="/" role="button">
+                      <div class="px-4">
+                        <i class="bi bi-list-stars me-2"></i>
+                        參考連結
+                      </div>
                     </a>
                 </div>
 
+                <div><!-- 不包含子選單 -->
+                    <a class="sidebar-link"
+                      href="/" role="button">
+                      <div class="px-4">
+                        <i class="bi bi-telephone me-2"></i>
+                        聯絡我們
+                      </div>
+                    </a>
+                </div>
+
+                <div><!-- 不包含子選單 -->
+                    <a class="sidebar-link"
+                      href="/" role="button">
+                      <div class="px-4">
+                        <i class="bi bi-gear me-2"></i>
+                        設定
+                      </div>
+                    </a>
+                </div>
 
             </div>
-
+            <!--登出按鈕 -->
             <a href="#" class="text-decoration-none  text-center d-block mt-auto sidebar-link active">
                 <div class="px-4">
                     <i class="bi bi-box-arrow-in-left"></i>登出
@@ -58,68 +87,226 @@
         </aside>
 
         <main class="main">
-            <div class="bg-white w-100 border-bottom sticky-top">
+            <div class="bg-white w-100 border-bottom sticky-top d-flex justify-content-between">
                 <a href="#" class="d-inline-block py-3 px-4 border-end" id="toggle-btn">
                     <i class="bi bi-arrows-angle-expand"></i>
                 </a>
+                <a href="#" class="d-inline-block py-3 px-4 border-start">
+                    <i class="bi bi-person-fill"></i>
+                </a>
             </div>
             <!--主要內容-->
-            <div>
-                <div class="p-4">
+            
+            <div class="p-4">
 
-                    <div class="row g-4 row-cols-1 row-cols-lg-3 mb-4">
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="card-body text-end">
-                                    <h2 class="display-6">在線人數</h2>
-                                    <p class="display-4 mb-0">
-                                        3,123
-                                    </p>
-                                </div>
+                <div class="row g-4 row-cols-1 row-cols-lg-3 mb-4">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-end">
+                                <h2 class="display-6">在線人數<i class="bi bi-people-fill ps-1"></i></h2>
+                                <p class="display-4 mb-0 fw-bold">
+                                    2,317
+                                </p>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="card-body text-end">
-                                    <h2 class="display-6">訂單數</h2>
-                                    <p class="display-4 mb-0">
-                                        1,069
-                                    </p>
-                                </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-end">
+                                <h2 class="display-6">訂單數<i class="bi bi-card-checklist ps-1"></i></h2>
+                                <p class="display-4 mb-0 fw-bold">
+                                    2,330
+                                </p>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <div class="card-body text-end">
-                                    <h2 class="display-6">營業額</h2>
-                                    <p class="mb-0 text-success">
-                                        <span class="fs-3">NT$</span><span class="display-4">204,432</span>
-                                    </p>
-                                </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-end">
+                                <h2 class="display-6">營業額<i class="bi bi-cash-coin ps-1"></i></h2>
+                                <p class="mb-0 text-success">
+                                    <span class="fs-3">NT$</span><span class="display-4 fw-bold">204,432</span>
+                                </p>
                             </div>
                         </div>
-                   </div>
+                    </div>
+                </div>
 
-                   <div class="row g-4">
-                        <div class="col-lg-4">
-                            <div class="card shawdow-sm h-100">
-                                <div class="card-body">
-                                    <canvas id="pie-chart" class="img-fluid"></canvas>
-                                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card shawdow-sm h-100">
+                            <div class="card-body">
+                                <canvas id="pie-chart" class="img-fluid" style="height: 300px;"></canvas>
                             </div>
                         </div>
-                        <div class="col-lg-8">
-                            <div class="card shawdow-sm h-100">
-                                <div class="card-body">
-                                    <canvas id="bar-chart"  class="img-fluid"></canvas>
-                                </div>
-                            </div>                            
-                        </div>
-                   </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card shawdow-sm h-100">
+                            <div class="card-body">
+                                <canvas id="bar-chart"  class="img-fluid" style="height: 300px;"></canvas>
+                            </div>
+                        </div>                            
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card shadow-sm">
+
+                <div class="card-header bg-transparent">
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent border-0 pe-0">
+                            <i class="bi bi-search "></i>
+                        </span>
+                        <input type="search" class="form-control border-0 shadow-none">
+                    </div>
+                </div>
+
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="bg-light">
+                                <tr class="align-middle">
+                                    <th scope="col" class="py-3 ps-4">訂單編號</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">用戶姓名</th>
+                                    <th scope="col">購買品項</th>
+                                    <th scope="col">付款狀態</th>
+                                    <th scope="col">購買金額</th>
+                                    <th scope="col" class="pe-4">編輯</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-nowrap">
+
+                                <tr>
+                                    <td scope="row">TX123456788</td>
+                                    <td>ab1234@gmail.com</td>
+                                    <td>卡小伯</td>
+                                    <td>六角西餐：大麥克全家餐</td>
+                                    <td><div class="text-muted">尚未付款</div></td>
+                                    <td class="text-center">900</td>
+                                    <td class="pe-4">
+                                        
+                                        <div class="btn-group">
+                                            <a href="#" class="btn btn-sm btn-outline-dark">
+                                                編輯<i class="bi bi-pen"></i>
+                                            </a>
+                                                <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  操作
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                  <li><a class="dropdown-item" href="#">修改狀態</a></li>
+                                                  <li>
+                                                    <a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="TX123456788">刪除訂單</a>
+                                                  </li>
+                                                </ul>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row">TX123456789</td>
+                                    <td>dfhduovf@gmail.com</td>
+                                    <td>卡中伯</td>
+                                    <td>六角西餐：大麥克無敵漢堡</td>
+                                    <td><div class="text-muted">已付款【現金支付】</div></td>
+                                    <td class="text-center">250</td>
+                                    <td class="pe-4">
+                                        <div class="btn-group">
+                                            <a href="#" class="btn btn-sm btn-outline-dark">
+                                                編輯<i class="bi bi-pen"></i>
+                                            </a>
+                                                <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  操作
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                  <li><a class="dropdown-item" href="#">修改狀態</a></li>
+                                                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="TX123456789">刪除訂單</a></li>
+                                                </ul>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row">TX123456790</td>
+                                    <td>shterttf@hotmail.com</td>
+                                    <td>卡大伯</td>
+                                    <td>六角西餐：大麥克+薯條吃到飽</td>
+                                    <td><div class="text-muted">已付款【信用卡支付】</div></td>
+                                    <td class="text-center">1,500</td>
+                                    <td class="pe-4">
+                                        <div class="btn-group">
+                                            <a href="#" class="btn btn-sm btn-outline-dark">
+                                                編輯<i class="bi bi-pen"></i>
+                                            </a>
+                                                <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  操作
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                  <li><a class="dropdown-item" href="#">修改狀態</a></li>
+                                                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="TX123456790">刪除訂單</a></li>
+                                                </ul>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row">TX123456791</td>
+                                    <td>koiijnjjuo8yujy@gmail.com</td>
+                                    <td>卡巨伯</td>
+                                    <td>六角西餐：鱈魚漢堡零核污染</td>
+                                    <td><div class="text-muted">尚未付款</div></td>
+                                    <td class="text-center">9,999</td>
+                                    <td class="pe-4">
+                                        <div class="btn-group">
+                                            <a href="#" class="btn btn-sm btn-outline-dark">
+                                                編輯<i class="bi bi-pen"></i>
+                                            </a>
+                                                <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  操作
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                  <li><a class="dropdown-item" href="#">修改狀態</a></li>
+                                                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="TX123456791">刪除訂單</a></li>
+                                                </ul>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card-footer py-3">
+                    <!--分頁樣式-->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination mb-0 justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
 
                 </div>
 
             </div>
+
+           
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                 <script>
                 (() => {

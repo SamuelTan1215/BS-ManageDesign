@@ -255,6 +255,7 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  6: $spacer * 4,//custom
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -1305,7 +1306,7 @@ $list-group-color:                  $gray-900 !default;
 $list-group-bg:                     $white !default;
 $list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
-$list-group-border-radius:          $border-radius !default;
+$list-group-border-radius:          $border-radius-lg;   //$border-radius !default; custom
 
 $list-group-item-padding-y:         $spacer / 2 !default;
 $list-group-item-padding-x:         $spacer !default;
